@@ -1,26 +1,194 @@
 @import "tailwindcss";
 
+@custom-variant dark (
+  &:where([data-theme="dark"], [data-theme="dark"] *)
+);
+
+html {
+  scroll-behavior: smooth;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  color-scheme: light;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --color-canvas: #151512;
+  --color-surface: #1e1e1a;
+  --color-text-primary: #f0eee6;
+  --color-text-muted: #b7b4aa;
+  --color-border-subtle: rgb(240 238 230 / 11%);
+  --color-border-strong: rgb(240 238 230 / 22%);
+  --color-project-accent: #aeb3ff;
+  --color-on-project-accent: #11110f;
+  --color-experience-accent-surface: #aeb3ff;
+  --color-experience-accent-text: #c6c9ff;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme {
+  --font-sans: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
+
+  /* Surfaces */
+  --color-canvas: #f1efe7;
+  --color-surface: #faf9f5;
+
+  /* Text */
+  --color-text-primary: #11110f;
+  --color-text-muted: #68675f;
+
+  /* Borders */
+  --color-border-subtle: rgb(17 17 15 / 16%);
+  --color-border-strong: #11110f;
+
+  /* Project */
+  --color-project-accent: #6670ff;
+  --color-on-project-accent: #fff;
+
+  /* Experience */
+  --color-experience-accent-surface: #6876ff;
+  --color-experience-accent-text: #4350ce;
+
+  /* Layout */
+  --spacing-page-padding: clamp(1.25rem, 4vw, 3.5rem);
+  --breakpoint-3xl: 120rem;
+}
+
+::selection {
+  background-color: var(--color-project-accent);
+  color: var(--color-on-project-accent);
+}
+
+button {
+  cursor: pointer;
+}
+
+.avatar-wheel {
+  --motion-roll-distance: calc(0px - var(--spacing-page-padding) - 4.5rem);
+  animation: motion-roll-away 1500ms cubic-bezier(0.45, 0, 0.55, 1);
+}
+
+.chat-invite::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  border-radius: inherit;
+  background: color-mix(in srgb, var(--color-text-primary) 6%, transparent);
+  pointer-events: none;
+  animation: motion-attention-pulse 20s cubic-bezier(0.22, 1, 0.36, 1) 1.4s
+    infinite backwards;
+}
+
+header:has(#my-popover:popover-open) .chat-invite::before {
+  opacity: 0 !important;
+  animation-play-state: paused;
+}
+
+dialog.gallery-dialog::backdrop {
+  animation: motion-fade-in 350ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+dialog.gallery-dialog[open] .gallery-panel-enter {
+  --motion-enter-y: 0.6rem;
+  --motion-enter-scale: 0.992;
+  animation: motion-enter 220ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+
+  .chat-invite::before {
+    animation: none !important;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@keyframes motion-roll-away {
+  0%,
+  100% {
+    transform: translateX(0) rotate(0deg);
+  }
+
+  41%,
+  53% {
+    transform: translateX(var(--motion-roll-distance)) rotate(-290deg);
+  }
+
+  84% {
+    transform: translateX(25px) rotate(30deg);
+  }
+
+  96% {
+    transform: translateX(-4px) rotate(-4deg);
+  }
+}
+
+@keyframes motion-attention-pulse {
+  0%,
+  3.5%,
+  7%,
+  100% {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+
+  1.75%,
+  5.1% {
+    opacity: 1;
+    transform: scale(1.06);
+  }
+}
+
+@keyframes motion-attention-scale {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  45% {
+    transform: scale(1.14);
+  }
+}
+
+@keyframes motion-pulse-settle {
+  0%,
+  100% {
+    color: inherit;
+    transform: translateY(0) scale(1);
+  }
+
+  40% {
+    color: var(--color-project-accent);
+    transform: translateY(-2px) scale(1.4);
+  }
+}
+
+@keyframes motion-fade-in {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes motion-enter {
+  from {
+    opacity: 0;
+    transform: translateY(var(--motion-enter-y, 0))
+      scale(var(--motion-enter-scale, 1));
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }

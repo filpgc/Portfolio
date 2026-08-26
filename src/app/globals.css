@@ -8,55 +8,72 @@ html {
   scroll-behavior: smooth;
 }
 
-:root {
+:root,
+[data-theme="light"] {
   color-scheme: light;
+
+  --theme-canvas: #f1efe7;
+  --theme-surface: #faf9f5;
+  --theme-text-primary: #11110f;
+  --theme-text-muted: #68675f;
+  --theme-border-subtle: rgb(17 17 15 / 16%);
+  --theme-border-strong: #11110f;
+  --theme-control-hover: rgb(17 17 15 / 4%);
+  --theme-project-accent: #6670ff;
+  --theme-on-project-accent: #fff;
+  --theme-experience-accent-text: #4350ce;
 }
 
-:root[data-theme="dark"] {
+[data-theme="dark"] {
   color-scheme: dark;
-  --color-canvas: #151512;
-  --color-surface: #1e1e1a;
-  --color-text-primary: #f0eee6;
-  --color-text-muted: #b7b4aa;
-  --color-border-subtle: rgb(240 238 230 / 11%);
-  --color-border-strong: rgb(240 238 230 / 22%);
-  --color-project-accent: #aeb3ff;
-  --color-on-project-accent: #11110f;
-  --color-experience-accent-surface: #aeb3ff;
-  --color-experience-accent-text: #c6c9ff;
+
+  --theme-canvas: #151512;
+  --theme-surface: #1e1e1a;
+  --theme-text-primary: #f0eee6;
+  --theme-text-muted: #b7b4aa;
+  --theme-border-subtle: rgb(240 238 230 / 11%);
+  --theme-border-strong: rgb(240 238 230 / 22%);
+  --theme-control-hover: rgb(240 238 230 / 8%);
+  --theme-project-accent: #aeb3ff;
+  --theme-on-project-accent: #11110f;
+  --theme-experience-accent-text: #c6c9ff;
 }
 
 @theme {
   --font-sans: "Avenir Next", Avenir, "Helvetica Neue", Arial, sans-serif;
-
-  /* Surfaces */
-  --color-canvas: #f1efe7;
-  --color-surface: #faf9f5;
-
-  /* Text */
-  --color-text-primary: #11110f;
-  --color-text-muted: #68675f;
-
-  /* Borders */
-  --color-border-subtle: rgb(17 17 15 / 16%);
-  --color-border-strong: #11110f;
-
-  /* Project */
-  --color-project-accent: #6670ff;
-  --color-on-project-accent: #fff;
-
-  /* Experience */
-  --color-experience-accent-surface: #6876ff;
-  --color-experience-accent-text: #4350ce;
 
   /* Layout */
   --spacing-page-padding: clamp(1.25rem, 4vw, 3.5rem);
   --breakpoint-3xl: 120rem;
 }
 
+@theme inline {
+  /* Surfaces */
+  --color-canvas: var(--theme-canvas);
+  --color-surface: var(--theme-surface);
+
+  /* Text */
+  --color-text-primary: var(--theme-text-primary);
+  --color-text-muted: var(--theme-text-muted);
+
+  /* Borders */
+  --color-border-subtle: var(--theme-border-subtle);
+  --color-border-strong: var(--theme-border-strong);
+
+  /* Interaction */
+  --color-control-hover: var(--theme-control-hover);
+
+  /* Project */
+  --color-project-accent: var(--theme-project-accent);
+  --color-on-project-accent: var(--theme-on-project-accent);
+
+  /* Experience */
+  --color-experience-accent-text: var(--theme-experience-accent-text);
+}
+
 ::selection {
-  background-color: var(--color-project-accent);
-  color: var(--color-on-project-accent);
+  background-color: var(--theme-project-accent);
+  color: var(--theme-on-project-accent);
 }
 
 button {
@@ -74,7 +91,7 @@ button {
   inset: 0;
   z-index: -1;
   border-radius: inherit;
-  background: color-mix(in srgb, var(--color-text-primary) 6%, transparent);
+  background: color-mix(in srgb, var(--theme-text-primary) 6%, transparent);
   pointer-events: none;
   animation: motion-attention-pulse 20s cubic-bezier(0.22, 1, 0.36, 1) 12s
     infinite backwards;
@@ -167,7 +184,7 @@ dialog.gallery-dialog[open] .gallery-panel-enter {
   }
 
   35% {
-    color: var(--color-project-accent);
+    color: var(--theme-project-accent);
     transform: translateY(-2px) scale(1.4);
   }
 }

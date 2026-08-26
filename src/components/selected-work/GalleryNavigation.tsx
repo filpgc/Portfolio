@@ -4,7 +4,7 @@ import { ArrowLeftIcon, ArrowRightIcon } from "@radix-ui/react-icons";
 import cx from "classnames";
 
 export const galleryControlButtonClass =
-  "group grid size-9 after:absolute after:-inset-1 relative place-items-center rounded-full outline-[0.5px] outline-text-primary/12 bg-surface/92 text-text-primary shadow-[0_2px_5px_rgb(17_17_15/0.06)] backdrop-blur-xl transition-[background-color,outline-color,opacity,transform] duration-150 ease-out hover:outline-text-primary/22 hover:bg-text-primary/[0.025] active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-project-accent disabled:cursor-default disabled:outline-text-primary/8 disabled:bg-surface/80 disabled:text-text-muted disabled:opacity-35 disabled:active:scale-100 sm:size-8 dark:shadow-[0_2px_9px_rgb(0_0_0/0.2)] dark:hover:outline-white/18 dark:hover:bg-white/[0.04]";
+  "group grid size-9 after:absolute after:-inset-1 relative place-items-center rounded-full outline-[0.5px] outline-text-primary/12 bg-surface/92 text-text-primary shadow-[0_2px_5px_rgb(17_17_15/0.06)] transition-[background-color,outline-color,opacity,transform] duration-150 ease-out hover:outline-text-primary/22 hover:bg-text-primary/[0.025] active:scale-95 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-project-accent disabled:cursor-default disabled:outline-text-primary/8 disabled:bg-surface/80 disabled:text-text-muted disabled:opacity-35 disabled:active:scale-100 sm:size-8 dark:shadow-[0_2px_9px_rgb(0_0_0/0.2)] dark:hover:outline-white/18 dark:hover:bg-white/[0.04]";
 
 type GalleryNavigationProps = {
   slides: readonly { readonly title: string }[];

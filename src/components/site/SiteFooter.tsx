@@ -43,6 +43,18 @@ export default function SiteFooter() {
                 <ArrowTopRightIcon aria-hidden="true" className="size-3.5" />
               </Link>
             </li>
+            <li className="border-b-[0.5px] border-border-subtle">
+              <Link
+                href="/Filippo_Piggici_CV.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="flex min-h-12 items-center justify-between"
+              >
+                <span>CV</span>
+                <span className="sr-only"> opens in a new tab</span>
+                <ArrowTopRightIcon aria-hidden="true" className="size-3.5" />
+              </Link>
+            </li>
             <li>
               <Link
                 href="mailto:filippo.piggici@gmail.com"
@@ -100,6 +112,21 @@ export default function SiteFooter() {
                 className="group flex min-h-11 items-center gap-1"
               >
                 <span className={footerLinkLabelClass}>LinkedIn</span>
+                <span className="sr-only"> opens in a new tab</span>
+                <ArrowTopRightIcon
+                  aria-hidden="true"
+                  className={footerLinkArrowClass}
+                />
+              </Link>
+            </li>
+            <li>
+              <Link
+                href="/Filippo_Piggici_CV.pdf"
+                target="_blank"
+                rel="noreferrer"
+                className="group flex min-h-11 items-center gap-1"
+              >
+                <span className={footerLinkLabelClass}>CV</span>
                 <span className="sr-only"> opens in a new tab</span>
                 <ArrowTopRightIcon
                   aria-hidden="true"

@@ -47,7 +47,7 @@ export default function Experience() {
                       ? "text-[clamp(2.8rem,13vw,5.5rem)] sm:text-[clamp(3.5rem,8vw,5.5rem)] lg:text-[clamp(4.5rem,7vw,6.5rem)]"
                       : "text-[clamp(2.8rem,12vw,4.25rem)] sm:text-[clamp(3rem,7vw,4.25rem)] lg:text-[clamp(2.8rem,3.6vw,3.8rem)]",
                     e.tone === "accent"
-                      ? "text-experience-accent-surface"
+                      ? "text-project-accent"
                       : "text-text-primary",
                   )}
                 >

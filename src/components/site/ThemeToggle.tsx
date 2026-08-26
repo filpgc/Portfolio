@@ -19,7 +19,7 @@ export default function ThemeToggle({ className }: { className?: string }) {
       onClick={toggleTheme}
       aria-label="Toggle colour theme"
       className={cx(
-        "group grid size-11 place-items-center rounded-full transition-[background-color,transform] duration-150 hover:bg-text-primary/6 active:scale-97 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-project-accent",
+        "group grid size-11 place-items-center rounded-full transition-[background-color,transform] duration-150 hover:bg-control-hover active:scale-97 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-project-accent",
         className,
       )}
     >

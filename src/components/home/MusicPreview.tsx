@@ -96,7 +96,7 @@ export default function MusicPreview() {
             aria-hidden="true"
             src={tracks[0].artwork}
             fill
-            className="pointer-events-none absolute inset-0 scale-190 select-none object-cover object-center blur-2xl opacity-25 brightness-125"
+            className="pointer-events-none absolute inset-0 scale-190 select-none object-cover object-center blur-[34px] dark:opacity-10 opacity-25 brightness-145 dark:brightness-100"
             sizes="(max-width: 1023px) 100vw, 50vw"
           />
           <div className="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-[minmax(0,1fr)_minmax(190px,.60fr)] sm:gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(220px,.60fr)] lg:gap-0 3xl:h-full 3xl:grid-cols-[minmax(0,1.1fr)_minmax(360px,.9fr)] 3xl:items-center 3xl:gap-20">
@@ -162,7 +162,7 @@ export default function MusicPreview() {
                 href={tracks[0].spotifyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex min-h-10 items-center self-start rounded-full border-[0.5px] border-white/60 bg-white/40 px-3 text-[11px] font-semibold tracking-tight text-project-accent backdrop-blur-2xl backdrop-brightness-115 transition-colors hover:border-white/80 hover:bg-white/80 sm:self-center 3xl:mt-8 3xl:min-h-11 3xl:self-start 3xl:px-4 3xl:text-xs dark:border-white/25 dark:bg-black/35 dark:hover:border-white/25 dark:hover:bg-black/55"
+                className="group inline-flex min-h-10 items-center self-start rounded-full border-[0.5px] border-white/60 bg-white/40 px-3 text-[11px] font-semibold tracking-tight text-project-accent backdrop-blur-2xl backdrop-brightness-115 transition-colors hover:border-white/80 hover:bg-white/80 sm:self-center 3xl:mt-8 3xl:min-h-11 3xl:self-start 3xl:px-4 3xl:text-xs dark:border-white/25 dark:bg-black/30 dark:hover:border-white/25 dark:hover:bg-black/55"
               >
                 Open in Spotify
                 <ArrowTopRightIcon
@@ -194,7 +194,7 @@ export default function MusicPreview() {
                 />
                 <div
                   aria-hidden="true"
-                  className="relative h-2 w-full rounded-full bg-white/55 dark:bg-black/55"
+                  className="relative h-2 w-full rounded-full bg-white/70 dark:bg-white/40"
                 >
                   <span
                     className="relative block h-full transition-[width] rounded-full bg-project-accent after:absolute after:-bottom-0.5 after:-right-1 after:z-10 after:size-3 after:rounded-full after:bg-white/90 after:shadow-xs/20 after:backdrop-blur-sm"

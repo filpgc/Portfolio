@@ -124,13 +124,13 @@ export default function Gallery({
       ref={dialogRef}
       tabIndex={-1}
       aria-label={`${project.name} selected work`}
-      className="gallery-dialog fixed inset-0 m-0 size-full max-h-none max-w-none overscroll-contain outline-0 bg-transparent p-0 outline-none backdrop:bg-black/25 backdrop:backdrop-blur-[3px] dark:backdrop:bg-black/55"
+      className="gallery-dialog fixed bg-transparent inset-0 m-0 size-full max-h-none max-w-none overscroll-contain outline-0  p-20 outline-none backdrop:bg-black/25 backdrop:backdrop-blur-[3px] dark:backdrop:bg-black/55"
       onClose={onClose}
       onClick={(event) => {
         if (event.currentTarget === event.target) closeDialog();
       }}
     >
-      <div className="gallery-panel-enter absolute inset-0 isolate m-0 overflow-hidden outline-[0.5px] outline-text-primary/12 bg-surface/98 shadow-[0_24px_80px_-24px_rgb(17_17_15/0.38),0_2px_10px_rgb(17_17_15/0.08)] sm:m-4 sm:rounded-[18px] lg:m-14 lg:rounded-3xl dark:shadow-[0_28px_90px_-24px_rgb(0_0_0/0.72),0_2px_12px_rgb(0_0_0/0.32)]">
+      <div className="gallery-panel-enter absolute sm:inset-10 inset-0 isolate m-auto overflow-hidden outline-[0.5px] outline-text-primary/12 bg-surface/98 shadow-[0_24px_80px_-24px_rgb(17_17_15/0.38),0_2px_10px_rgb(17_17_15/0.08)] max-w-[2000px] max-h-[1200px] sm:rounded-[18px]  lg:rounded-3xl dark:shadow-[0_28px_90px_-24px_rgb(0_0_0/0.72),0_2px_12px_rgb(0_0_0/0.32)]">
         <GalleryNavigation
           slides={images}
           currentIndex={currentViewIX}

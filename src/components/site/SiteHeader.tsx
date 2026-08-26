@@ -1,10 +1,12 @@
 "use client";
 
 import avatar from "@/assets/avatar.png";
+import { usePathname } from "next/navigation";
 import {
   CodeSandboxLogoIcon,
   CookieIcon,
   KeyboardIcon,
+  TokensIcon,
 } from "@radix-ui/react-icons";
 import cx from "classnames";
 import Image from "next/image";
@@ -14,9 +16,11 @@ import ContactPopover from "./ContactPopover";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinkClass =
-  "group flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-full px-3 py-0.5 leading-none transition-[background-color,transform] duration-150 hover:bg-text-primary/6 active:scale-97";
+  "group flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-full px-3 py-0.5 leading-none transition-[background-color,transform] duration-150 hover:bg-control-hover active:scale-97";
 
 export default function SiteHeader() {
+  const pathName = usePathname();
+
   const [isAvatarRolling, setIsAvatarRolling] = useState(false);
 
   return (
@@ -69,6 +73,19 @@ export default function SiteHeader() {
             >
               <CodeSandboxLogoIcon className="size-4 -translate-y-px transition-transform duration-200 group-hover:scale-105" />
               <span className="hidden sm:inline">Experience</span>
+            </Link>
+          </li>
+          <li className="max-[380px]:hidden">
+            <Link
+              href="/foundations"
+              className={cx(navLinkClass, {
+                "bg-control-hover pointer-events-none":
+                  pathName.startsWith("/foundations"),
+              })}
+              aria-label="System"
+            >
+              <TokensIcon className="size-4 -translate-y-px transition-transform duration-200 group-hover:scale-105" />
+              <span className="hidden sm:inline">System</span>
             </Link>
           </li>
           <li>

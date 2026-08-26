@@ -80,7 +80,7 @@ export default function ContactPopover() {
       <button
         type="button"
         popoverTarget="my-popover"
-        className="chat-invite relative isolate hidden min-h-11 items-center rounded-full px-3 py-0.5 font-semibold leading-none tracking-[-0.01em] transition-[background-color,transform] duration-150 hover:bg-text-primary/6 active:scale-97 group-has-[:popover-open]/site-header:bg-text-primary/6 md:flex"
+        className="chat-invite relative isolate hidden min-h-11 items-center rounded-full px-3 py-0.5 font-semibold leading-none tracking-[-0.01em] transition-[background-color,transform] duration-150 hover:bg-control-hover active:scale-97 group-has-[:popover-open]/site-header:bg-text-primary/6 md:flex"
       >
         Let&apos;s chat
       </button>

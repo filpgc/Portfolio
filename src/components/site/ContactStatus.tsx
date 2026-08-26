@@ -36,7 +36,7 @@ export default function ContactStatus({
         type="button"
         aria-label="Dismiss message status"
         onClick={onDismiss}
-        className="-mr-1 grid size-6 shrink-0 place-items-center rounded-full text-text-muted transition-colors hover:bg-text-primary/6 hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-project-accent dark:hover:bg-white/6"
+        className="-mr-1 grid size-6 shrink-0 place-items-center rounded-full text-text-muted transition-colors hover:bg-control-hover hover:text-text-primary focus-visible:outline-2 focus-visible:outline-offset-1 focus-visible:outline-project-accent"
       >
         <Cross1Icon className="size-3" />
       </button>

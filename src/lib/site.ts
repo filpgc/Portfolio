@@ -5,4 +5,4 @@ export const siteUrl = new URL(
 );
 
 export const siteDescription =
-  "Product-minded frontend and design engineer working across enterprise AI, consumer marketplaces, and independent products.";
+  "Frontend and product engineer building enterprise AI products, consumer marketplaces and independent tools, from problem framing to production.";

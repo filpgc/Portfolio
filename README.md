@@ -1,6 +1,6 @@
 # Filippo Piggici: Portfolio
 
-Personal portfolio for selected product work, frontend leadership and independent projects.
+Personal portfolio of a frontend and product engineer: selected product work, frontend leadership and independent projects.
 
 [filippopiggici.dev](https://filippopiggici.dev)
 
@@ -15,7 +15,7 @@ Outverse is an enterprise platform for configuring, running and understanding cu
 
 The iframe-based widget and its host-page orchestration support millions of interactions in production. My work includes the conversation UI, responsive and branded presentation, localisation, bootstrap integration and the `postMessage` layer coordinating state and pointer events between the host page and iframe.
 
-#### The design problem
+#### The product problem
 
 An operational agent interface has to keep the customer conversation readable while progressively exposing the context needed to understand behaviour:
 

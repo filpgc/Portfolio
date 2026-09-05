@@ -164,8 +164,7 @@ export default function FoundationsPage() {
               className="text-base leading-6"
               detail="16px type · 24px line · Regular"
             >
-              Body — Product design and frontend engineering for complex
-              systems.
+              Body — Product and frontend engineering for complex systems.
             </TextSample>
             <TextSample
               className="text-sm leading-5"
@@ -183,7 +182,7 @@ export default function FoundationsPage() {
               className="text-xs leading-4"
               detail="12px type · 16px line · Regular"
             >
-              Caption — 2021 to Now · Frontend &amp; Design
+              Caption — 2021 to Now · Frontend &amp; Product
             </TextSample>
             <TextSample
               className="text-[10px] font-semibold uppercase leading-[14px] tracking-widest"

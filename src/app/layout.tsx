@@ -18,7 +18,7 @@ const themeScript = `
 export const metadata: Metadata = {
   metadataBase: siteUrl,
   title: {
-    default: "Filippo Piggici | Frontend & Design Engineer",
+    default: "Filippo Piggici | Frontend & Product Engineer",
     template: "%s | Filippo Piggici",
   },
   description: siteDescription,
@@ -30,12 +30,12 @@ export const metadata: Metadata = {
     type: "website",
     url: "/",
     siteName: "Filippo Piggici | Portfolio",
-    title: "Filippo Piggici | Frontend & Design Engineer",
+    title: "Filippo Piggici | Frontend & Product Engineer",
     description: siteDescription,
   },
   twitter: {
     card: "summary_large_image",
-    title: "Filippo Piggici | Frontend & Design Engineer",
+    title: "Filippo Piggici | Frontend & Product Engineer",
     description: siteDescription,
   },
 };

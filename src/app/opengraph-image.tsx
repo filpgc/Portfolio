@@ -1,7 +1,7 @@
 import { ImageResponse } from "next/og";
 import { ArrowTopRightIcon } from "@radix-ui/react-icons";
 
-export const alt = "Filippo Piggici, Frontend and Design Engineer";
+export const alt = "Filippo Piggici, Frontend and Product Engineer";
 export const size = { width: 1200, height: 630 };
 export const contentType = "image/png";
 
@@ -40,7 +40,7 @@ export default function OpenGraphImage() {
               textTransform: "uppercase",
             }}
           >
-            Filippo Piggici · Frontend &amp; Design Engineer
+            Filippo Piggici · Frontend &amp; Product Engineer
           </div>
 
           <div

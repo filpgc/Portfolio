@@ -3,7 +3,7 @@ import HeroSoundSketch from "./HeroSoundSketch";
 
 export default function HomeHero() {
   const summary =
-    "I lead frontend at Outverse, working across product design and engineering. Before that, I worked at Treatwell. I also run Streaming Calculator and release music as Moyo.";
+    "I lead frontend at Outverse, working across product and engineering. Before that, I worked at Treatwell. I also run Streaming Calculator and release music as Moyo.";
 
   return (
     <section

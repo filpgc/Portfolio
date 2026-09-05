@@ -66,7 +66,7 @@ export default function HeroSoundSketch() {
   return (
     <div className="mt-4 sm:mt-10">
       <span className="text-xs font-bold uppercase tracking-widest text-text-muted">
-        Filippo Piggici · Frontend &amp; Design Engineer
+        Filippo Piggici · Frontend &amp; Product Engineer
       </span>
 
       <div className="mt-8 sm:mt-15">

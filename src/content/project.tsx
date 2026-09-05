@@ -128,7 +128,7 @@ export const projects = [
     color: "#6674fa",
     textColor: "#f7f5ee",
     description:
-      "I shape interaction design and frontend delivery for enterprise service AI operations, from intent and escalation configuration to reasoning observability, analytics and the embedded customer widget.",
+      "I shape the product experience and lead frontend delivery for enterprise service AI operations, from intent and escalation configuration to reasoning observability, analytics and the embedded customer widget.",
     evidenceLabel: "Production use",
     evidence: "Millions of live interactions.",
   },
@@ -136,7 +136,7 @@ export const projects = [
     number: "02",
     name: "Streaming Calculator",
     shortName: "Streaming",
-    category: "Independent product · Design & engineering",
+    category: "Independent product · Product, growth & engineering",
     period: "Owner",
     role: "Owner & builder",
     href: "https://streamingcalculator.com",
@@ -178,7 +178,7 @@ export const projects = [
     lightAccentColor: "#14705d",
     textColor: "#10261f",
     description:
-      "I own product, design and engineering across dynamic creator tools, SEO-led editorial, analytics, distribution, partnerships and revenue.",
+      "I own product and engineering end to end across dynamic creator tools, SEO-led editorial, analytics, distribution, partnerships and revenue.",
     evidenceLabel: "Independent reach",
     evidence:
       "Over 20k monthly views across 30+ tools and 50+ guides, with ~800 backlinks.",

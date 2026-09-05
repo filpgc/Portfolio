@@ -13,7 +13,7 @@ export default function SiteFooter() {
         <div className="py-6 text-xs">
           <div className="flex flex-col gap-0.5">
             <span className="font-bold">Filippo Piggici</span>
-            <span className="text-text-muted">Frontend & Design Engineer</span>
+            <span className="text-text-muted">Frontend & Product Engineer</span>
           </div>
         </div>
 
@@ -76,7 +76,7 @@ export default function SiteFooter() {
       <div className="hidden h-full grid-cols-3 justify-between gap-8 sm:grid">
         <div className="flex flex-col gap-0.5 py-8 text-xs">
           <span className="font-bold">Filippo Piggici</span>
-          <span className="text-text-muted">Frontend & Design Engineer</span>
+          <span className="text-text-muted">Frontend & Product Engineer</span>
         </div>
 
         <span className="mt-auto justify-self-center text-nowrap rounded-t-[50px] border-[0.5px] border-b-0 border-border-subtle bg-surface/80 px-3.5 pb-0.5 pt-1 text-[10px] font-medium text-text-primary/70">

@@ -7,13 +7,13 @@ export default function NotFound() {
       aria-labelledby="not-found-title"
       className="flex flex-1 flex-col justify-between py-8 sm:py-12"
     >
-      <div className="flex items-center justify-between border-b-[0.5px] border-border-strong pb-3 text-xs font-bold uppercase tracking-widest">
+      <div className="flex items-center justify-between border-b-[0.5px] border-border-strong pb-3 text-xs font-semibold uppercase tracking-widest">
         <span>404</span>
         <span className="text-text-muted">Page not found</span>
       </div>
 
-      <div className="py-20 sm:py-28">
-        <p className="mb-4 text-xs font-bold uppercase tracking-widest text-project-accent">
+      <div className="py-16 sm:py-18">
+        <p className="mb-4 text-xs font-semibold uppercase tracking-widest text-project-accent">
           Wrong turn
         </p>
         <h1
@@ -26,7 +26,7 @@ export default function NotFound() {
 
       <Link
         href="/"
-        className="flex min-h-12 items-center justify-between border-t-[0.5px] border-border-strong pt-3 text-sm font-bold"
+        className="flex min-h-12 items-center justify-between border-t-[0.5px] border-border-strong pt-3 text-sm font-semibold"
       >
         Back to the portfolio
         <ArrowTopLeftIcon aria-hidden="true" className="size-3.5" />

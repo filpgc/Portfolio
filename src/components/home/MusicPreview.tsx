@@ -59,7 +59,7 @@ export default function MusicPreview() {
     <section
       id="music"
       aria-label="Music by Moyo"
-      className="-mx-page-padding min-h-[520px] scroll-mt-4 border-border-strong sm:scroll-mt-24 lg:border-t-[0.5px]"
+      className="-mx-page-padding flex min-h-[520px] flex-col scroll-mt-4 border-border-strong sm:scroll-mt-24 lg:border-t-[0.5px]"
     >
       <div className="*:px-page-padding pt-6 lg:hidden">
         <SectionHeader
@@ -70,27 +70,28 @@ export default function MusicPreview() {
           <CookieIcon className="size-4" />
         </SectionHeader>
       </div>
-      <div className="grid h-full grid-cols-1 lg:grid-cols-2">
-        <div className="hidden min-h-[420px] flex-col justify-between gap-10 px-page-padding py-10 sm:min-h-[520px] sm:gap-18 sm:py-14 lg:flex lg:min-h-0 3xl:min-h-[900px] 3xl:py-20">
+      {/* grow, not h-full: a percentage height ignores the section's min-height. */}
+      <div className="grid grow grid-cols-1 lg:grid-cols-2">
+        <div className="hidden min-h-[420px] flex-col justify-between gap-10 px-page-padding py-10 sm:min-h-[520px] sm:gap-18 sm:py-14 lg:flex lg:min-h-0 3xl:min-h-[900px] 3xl:py-18">
           <div className="grid grid-cols-[2rem_1fr] items-center md:grid-cols-[45px_.45fr_1fr] gap-x-3">
             <span
-              className="flex size-6 items-center text-text-muted"
+              className="flex size-6 items-center opacity-85"
               aria-hidden="true"
             >
               <CookieIcon className="size-4" />
             </span>
-            <span className="font-bold">Music · Moyo</span>
+            <span className="font-semibold">Music · Moyo</span>
           </div>
 
           <h2 className="max-w-[10ch] text-[clamp(3rem,13vw,6rem)] font-medium leading-[0.9] tracking-tighter sm:text-[clamp(3rem,8vw,6rem)] lg:text-[clamp(3rem,6vw,6rem)] 3xl:text-[7rem]">
             I make music, too.
           </h2>
 
-          <p className="text-[0.95rem] leading-6 sm:text-base">
+          <p className="text-base leading-6">
             Music I write and release as Moyo.
           </p>
         </div>
-        <div className="relative grow overflow-hidden p-page-padding sm:p-10 lg:border-l-[0.5px] lg:border-border-strong lg:p-12 3xl:min-h-[900px] 3xl:p-20">
+        <div className="relative grow overflow-hidden p-page-padding sm:p-10 lg:border-l-[0.5px] lg:border-border-strong lg:p-12 3xl:min-h-[900px] 3xl:p-18">
           <Image
             alt=""
             aria-hidden="true"
@@ -99,7 +100,7 @@ export default function MusicPreview() {
             className="pointer-events-none absolute inset-0 scale-190 select-none object-cover object-center blur-[34px] dark:opacity-10 opacity-25 brightness-145 dark:brightness-100"
             sizes="(max-width: 1023px) 100vw, 50vw"
           />
-          <div className="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-[minmax(0,1fr)_minmax(190px,.60fr)] sm:gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(220px,.60fr)] lg:gap-0 3xl:h-full 3xl:grid-cols-[minmax(0,1.1fr)_minmax(360px,.9fr)] 3xl:items-center 3xl:gap-20">
+          <div className="relative z-10 grid grid-cols-1 gap-6 sm:grid-cols-[minmax(0,1fr)_minmax(190px,.60fr)] sm:gap-4 lg:grid-cols-[minmax(0,1fr)_minmax(220px,.60fr)] lg:gap-0 3xl:h-full 3xl:grid-cols-[minmax(0,1.1fr)_minmax(360px,.9fr)] 3xl:items-center 3xl:gap-18">
             <div className="relative isolate mx-auto aspect-square w-[98%] max-w-[36rem] rotate-[-0.8deg] sm:max-w-none 3xl:w-full 3xl:max-w-[44rem]">
               <div
                 className={cx(
@@ -162,7 +163,7 @@ export default function MusicPreview() {
                 href={tracks[0].spotifyUrl}
                 target="_blank"
                 rel="noreferrer"
-                className="group inline-flex min-h-10 items-center self-start rounded-full border-[0.5px] border-white/60 bg-white/40 px-3 text-[11px] font-semibold tracking-tight text-project-accent backdrop-blur-2xl backdrop-brightness-115 transition-colors hover:border-white/80 hover:bg-white/80 sm:self-center 3xl:mt-8 3xl:min-h-11 3xl:self-start 3xl:px-4 3xl:text-xs dark:border-white/25 dark:bg-black/30 dark:hover:border-white/25 dark:hover:bg-black/55"
+                className="group inline-flex min-h-10 items-center self-start rounded-full border-[0.5px] border-white/60 bg-white/40 px-3 text-xs font-semibold tracking-tight text-project-accent backdrop-blur-2xl backdrop-brightness-115 transition-colors hover:border-white/80 hover:bg-white/80 sm:self-center 3xl:mt-8 3xl:min-h-11 3xl:self-start 3xl:px-4 dark:border-white/25 dark:bg-black/30 dark:hover:border-white/25 dark:hover:bg-black/55"
               >
                 Open in Spotify
                 <ArrowTopRightIcon
@@ -171,7 +172,7 @@ export default function MusicPreview() {
                 />
               </a>
 
-              <div className="relative mt-1.5 flex min-h-4 w-full items-center rounded-sm has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-project-accent 3xl:mt-10">
+              <div className="relative mt-2 flex min-h-4 w-full items-center rounded-sm has-focus-visible:outline-2 has-focus-visible:outline-offset-2 has-focus-visible:outline-project-accent 3xl:mt-10">
                 <input
                   type="range"
                   min={0}
@@ -194,13 +195,21 @@ export default function MusicPreview() {
                 />
                 <div
                   aria-hidden="true"
-                  className="relative h-2 w-full rounded-full bg-white/70 dark:bg-white/40"
+                  className="relative h-2 w-full overflow-hidden rounded-full bg-white/70 dark:bg-white/40"
                 >
+                  {/* Full-width fill slid in from the left: transform only, no layout. */}
                   <span
-                    className="relative block h-full transition-[width] rounded-full bg-project-accent after:absolute after:-bottom-0.5 after:-right-1 after:z-10 after:size-3 after:rounded-full after:bg-white/90 after:shadow-xs/20 after:backdrop-blur-sm"
-                    style={{ width: `${progress}%` }}
+                    className="absolute inset-0 rounded-full bg-project-accent transition-transform"
+                    style={{ transform: `translateX(${progress - 100}%)` }}
                   />
                 </div>
+                <span
+                  aria-hidden="true"
+                  className="pointer-events-none absolute inset-0 z-10 transition-transform"
+                  style={{ transform: `translateX(${progress}%)` }}
+                >
+                  <span className="absolute -left-1.5 top-1/2 size-3 -translate-y-1/2 rounded-full bg-white/90 shadow-xs/20 backdrop-blur-sm" />
+                </span>
               </div>
               <div className="flex items-center justify-between gap-2 3xl:mt-1">
                 <span className="text-[10px] font-medium text-text-muted">

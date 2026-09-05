@@ -19,7 +19,7 @@ export default function SectionHeader({
       >
         {children}
       </span>
-      <h2 id={id} className="font-bold">
+      <h2 id={id} className="font-semibold">
         {title}
       </h2>
       <p className="col-start-2 max-w-[52ch] text-sm leading-5 md:col-start-auto md:ml-auto md:text-right">

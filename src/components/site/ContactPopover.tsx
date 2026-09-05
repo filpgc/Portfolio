@@ -109,7 +109,7 @@ export default function ContactPopover() {
               />
             </span>
             <div className="flex flex-col">
-              <span className="text-sm font-bold">Filippo Piggici</span>
+              <span className="text-sm font-semibold">Filippo Piggici</span>
               <span className="text-xs text-text-muted/70 font-medium -mt-[0.5px]">
                 replies by email
               </span>
@@ -127,7 +127,7 @@ export default function ContactPopover() {
           </div>
 
           <div className="bg-text-primary/4 p-4">
-            <div className="max-w-[80%] rounded-2xl rounded-bl-md border-[0.5px] border-border-subtle bg-surface p-3 text-[13px]">
+            <div className="max-w-[80%] rounded-[18px] rounded-bl-sm border-[0.5px] border-border-subtle bg-surface p-3 text-[13px]">
               Hey, send me a message here and I’ll reply by email, usually
               within a day.
             </div>
@@ -149,7 +149,7 @@ export default function ContactPopover() {
                 name="email"
                 required
                 maxLength={254}
-                className="w-full bg-transparent text-sm text-text-primary placeholder:text-text-muted/70 focus-within:outline-0"
+                className="w-full bg-transparent text-base text-text-primary placeholder:text-text-muted/70 focus-within:outline-0"
                 placeholder="your@email.com"
               />
             </label>
@@ -162,7 +162,7 @@ export default function ContactPopover() {
                   name="message"
                   required
                   maxLength={5000}
-                  className="field-sizing-content min-h-[5rem] max-h-[25rem] w-full resize-none bg-transparent text-sm text-text-primary placeholder:text-text-muted/70 focus-within:outline-0"
+                  className="field-sizing-content min-h-[5rem] max-h-[25rem] w-full resize-none bg-transparent text-base text-text-primary placeholder:text-text-muted/70 focus-within:outline-0"
                   rows={7}
                   placeholder="Write a message"
                 />

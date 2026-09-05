@@ -35,7 +35,7 @@ export default function ProjectPreview({
       className={cx(
         "flex flex-col font-medium ease-out focus-visible:outline-[3px] focus-visible:-outline-offset-[6px]",
         isHorizontal
-          ? "gap-6 p-4 pb-7"
+          ? "gap-6 p-4 pb-8"
           : "min-h-0 gap-6 border-l-[0.5px] border-current/25 p-10",
       )}
       style={{
@@ -65,7 +65,7 @@ function PreviewHeader({
   const isStreamingCalculator = project.number === "02";
 
   return (
-    <div className="flex items-center justify-between gap-3 text-[11px] uppercase tracking-wide sm:text-xs">
+    <div className="flex items-center justify-between gap-3 text-xs uppercase tracking-wide">
       <span className="min-w-0 whitespace-nowrap tabular-nums">
         {project.number} /{" "}
         <span className="sm:hidden">{project.shortName}</span>
@@ -134,7 +134,7 @@ function PreviewArtwork({
         type="button"
         aria-label={`Explore ${project.name}`}
         className={cx(
-          "group/action relative aspect-[3582/2114] translate-z-0 overflow-hidden rounded-sm border-[0.5px] border-white/20 shadow-2xl/40 transition-all duration-400 ease-out [backface-visibility:hidden]",
+          "group/action relative aspect-[3582/2114] translate-z-0 overflow-hidden rounded-sm border-[0.5px] border-white/20 shadow-2xl/40 transition-[translate,scale,rotate,box-shadow] duration-300 ease-out [backface-visibility:hidden]",
           isHorizontal
             ? "w-full"
             : "w-[92%] group-hover:-translate-y-2 group-hover:scale-[1.02] group-hover:shadow-2xl/60",
@@ -173,11 +173,11 @@ function PreviewArtwork({
             <span
               ref={revealRef}
               className={cx(
-                "inline-flex scale-[0.96] group/button items-center gap-0.5 rounded-2xl border-[0.5px] border-neutral-100/35 bg-neutral-900/80 p-1 text-neutral-100 opacity-0 shadow-lg/20 backdrop-blur-md",
+                "inline-flex scale-[0.96] group/button items-center gap-0.5 rounded-[18px] border-[0.5px] border-neutral-100/35 bg-neutral-900/80 p-1.5 text-neutral-100 opacity-0 shadow-lg/20 backdrop-blur-md",
                 "transition-[opacity,scale] duration-200 ease-out group-hover/action:scale-100 group-hover/action:opacity-100 group-focus-visible/action:scale-100 group-focus-visible/action:opacity-100",
               )}
             >
-              <span className="flex items-center px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.06em]">
+              <span className="flex items-center px-3 py-2 text-xs font-semibold uppercase tracking-[0.06em]">
                 Explore project
               </span>
               <span className="grid size-8 shrink-0 place-items-center rounded-xl bg-neutral-100/10">
@@ -209,18 +209,18 @@ function PreviewSummary({
         </p>
         <div className="mt-4 grid gap-3 border-t-[0.5px] border-current/25 pt-3 sm:grid-cols-2 sm:gap-8">
           <div>
-            <span className="block text-[9px] font-bold uppercase tracking-widest opacity-75 sm:text-[10px]">
+            <span className="block text-[10px] font-semibold uppercase tracking-widest">
               Role
             </span>
-            <p className="mt-1 text-[11px] font-semibold leading-4 sm:text-xs sm:leading-5">
+            <p className="mt-1 text-xs font-semibold leading-4 sm:leading-5">
               {project.role}
             </p>
           </div>
           <div>
-            <span className="block text-[9px] font-bold uppercase tracking-widest opacity-75 sm:text-[10px]">
+            <span className="block text-[10px] font-semibold uppercase tracking-widest">
               {project.evidenceLabel}
             </span>
-            <p className="mt-1 max-w-[52ch] text-pretty text-[11px] leading-4 mr-10 sm:text-xs sm:leading-5">
+            <p className="mt-1 max-w-[52ch] text-pretty text-xs leading-4 mr-10 sm:leading-5">
               {project.evidence}
             </p>
           </div>

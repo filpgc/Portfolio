@@ -65,11 +65,13 @@ export default function HeroSoundSketch() {
 
   return (
     <div className="mt-4 sm:mt-10">
-      <span className="text-xs font-bold uppercase tracking-widest text-text-muted">
-        Filippo Piggici · Frontend &amp; Design Engineer
-      </span>
+      <p className="text-sm font-medium text-text-muted">
+        <span className="text-text-primary">Filippo Piggici</span>
+        {" · "}
+        <span className="whitespace-nowrap">Frontend &amp; Design Engineer</span>
+      </p>
 
-      <div className="mt-8 sm:mt-15">
+      <div className="mt-8 sm:mt-16">
         <h1
           id="home-title"
           className="max-w-[15ch] text-[clamp(3rem,12vw,7.6rem)] font-medium leading-[0.91] tracking-[-0.065em] 3xl:text-[clamp(7.6rem,7vw,10rem)]"
@@ -78,6 +80,8 @@ export default function HeroSoundSketch() {
           <button
             type="button"
             onClick={togglePlayback}
+            aria-pressed={isPlaying}
+            aria-describedby="hero-voice-hint"
             className="group/voice z-10 relative inline-flex items-baseline text-project-accent transition-transform duration-200 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:rounded-sm focus-visible:outline-2 focus-visible:outline-offset-[0.06em] focus-visible:outline-project-accent active:scale-[0.985] active:duration-75"
           >
             <span>Filippo</span>
@@ -119,6 +123,11 @@ export default function HeroSoundSketch() {
           </span>
         </h1>
       </div>
+
+      {/* Kept outside the h1 so the heading's accessible name stays the sentence. */}
+      <span id="hero-voice-hint" hidden>
+        Plays a short voice intro
+      </span>
 
       <audio
         ref={audioRef}

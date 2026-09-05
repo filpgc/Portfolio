@@ -58,8 +58,8 @@ const appliedThemes = [
 
 export default function FoundationsPage() {
   return (
-    <article className="mx-auto flex w-full max-w-[1440px] flex-col gap-18 py-12 font-sans sm:gap-22 sm:py-16 lg:gap-26 lg:py-20">
-      <header className="flex min-h-52 flex-col justify-between gap-16  pb-8">
+    <article className="mx-auto flex w-full max-w-[1440px] flex-col gap-16 py-12 font-sans sm:gap-18 sm:py-16 lg:py-18">
+      <header className="flex min-h-52 flex-col justify-between gap-16 pb-8">
         <p className="text-[10px] font-semibold uppercase tracking-widest sm:text-xs">
           Filippo Piggici / Portfolio
         </p>
@@ -79,8 +79,8 @@ export default function FoundationsPage() {
         title="Colour"
         note="Semantic colour tokens map to Tailwind utilities and define the light and dark themes."
       >
-        <div className="flex flex-col gap-5">
-          <div className="grid gap-5 lg:grid-cols-[repeat(5,minmax(0,1fr))] lg:gap-x-3 lg:gap-y-5">
+        <div className="flex flex-col gap-6">
+          <div className="grid gap-6 lg:grid-cols-[repeat(5,minmax(0,1fr))] lg:gap-x-3 lg:gap-y-6">
             <div className="flex flex-col gap-2 lg:col-span-4 lg:col-start-1 lg:row-start-1">
               <h3 className="text-[10px] font-semibold uppercase tracking-widest text-text-muted">
                 Light theme
@@ -129,7 +129,7 @@ export default function FoundationsPage() {
       <FoundationSection
         number="02"
         title="Typography"
-        note="Avenir Next · four weights · tighter letter spacing for display text"
+        note="Avenir Next · three weights, none bolder than Semi Bold · tighter letter spacing for display text"
       >
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1.35fr)_minmax(18rem,.8fr)] lg:gap-14">
           <div className="flex min-w-0 flex-col gap-10">
@@ -159,13 +159,12 @@ export default function FoundationsPage() {
             </TypeSpecimen>
           </div>
 
-          <div className="flex flex-col justify-between gap-9 border-t-[0.5px] border-border-subtle pt-8 lg:border-l-[0.5px] lg:border-t-0 lg:pl-8 lg:pt-0">
+          <div className="flex flex-col justify-between gap-8 border-t-[0.5px] border-border-subtle pt-8 lg:border-l-[0.5px] lg:border-t-0 lg:pl-8 lg:pt-0">
             <TextSample
               className="text-base leading-6"
               detail="16px type · 24px line · Regular"
             >
-              Body — Product design and frontend engineering for complex
-              systems.
+              Body — Product and frontend engineering for complex systems.
             </TextSample>
             <TextSample
               className="text-sm leading-5"
@@ -183,7 +182,7 @@ export default function FoundationsPage() {
               className="text-xs leading-4"
               detail="12px type · 16px line · Regular"
             >
-              Caption — 2021 to Now · Frontend &amp; Design
+              Caption — 2021 to Now · Frontend &amp; Product
             </TextSample>
             <TextSample
               className="text-[10px] font-semibold uppercase leading-[14px] tracking-widest"
@@ -201,7 +200,7 @@ export default function FoundationsPage() {
         note="4px spacing base · 0.5px rules · restrained corner radii"
       >
         <div className="grid gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,29.375rem)] lg:gap-16">
-          <div className="flex flex-col gap-7">
+          <div className="flex flex-col gap-8">
             <div className="flex min-h-20 flex-wrap items-end gap-3">
               {spaceScale.map((size) => (
                 <span
@@ -223,7 +222,7 @@ export default function FoundationsPage() {
           </div>
 
           <div className="flex flex-col gap-6 border-t-[0.5px] border-border-subtle pt-8 lg:border-l-[0.5px] lg:border-t-0 lg:pl-8 lg:pt-0">
-            <div className="flex flex-wrap items-center gap-3.5">
+            <div className="flex flex-wrap items-center gap-4">
               {radii.map(({ name, radius }) => (
                 <span
                   key={name}
@@ -258,7 +257,7 @@ export default function FoundationsPage() {
             <div
               key={name}
               data-theme={theme}
-              className="flex min-h-56 flex-col justify-between border-[0.5px] border-border-subtle bg-canvas p-5 text-text-primary"
+              className="flex min-h-56 flex-col justify-between border-[0.5px] border-border-subtle bg-canvas p-6 text-text-primary"
             >
               <div>
                 <p className="text-[10px] font-semibold uppercase tracking-widest text-text-muted">
@@ -292,9 +291,9 @@ export default function FoundationsPage() {
             </div>
           ))}
 
-          <div className="flex min-h-56 flex-col justify-between border-[0.5px] border-border-subtle p-5">
+          <div className="flex min-h-56 flex-col justify-between border-[0.5px] border-border-subtle p-6">
             <div>
-              <p className="text-xs font-bold leading-4">Same utilities</p>
+              <p className="text-xs font-semibold leading-4">Same utilities</p>
               <p className="mt-2 text-sm leading-5 text-text-muted">
                 Hover or use the keyboard to inspect the actual states.
               </p>
@@ -326,9 +325,9 @@ function FoundationSection({
   children: ReactNode;
 }) {
   return (
-    <section className="flex flex-col gap-5">
-      <header className="flex flex-col gap-2 border-b-[0.5px] border-border-subtle pb-3.5 sm:flex-row sm:items-end sm:justify-between">
-        <h2 className="text-base font-bold leading-6">
+    <section className="flex flex-col gap-6">
+      <header className="flex flex-col gap-2 border-b-[0.5px] border-border-subtle pb-4 sm:flex-row sm:items-end sm:justify-between">
+        <h2 className="text-base font-semibold leading-6">
           {number} / {title}
         </h2>
         <p className="max-w-[54ch] text-xs leading-4 text-text-muted sm:text-right sm:text-sm sm:leading-5">
@@ -356,7 +355,7 @@ function ColourSwatch({
   return (
     <div
       className={cx(
-        "flex flex-col justify-between border-[0.5px] border-current/15 p-3.5",
+        "flex flex-col justify-between border-[0.5px] border-current/15 p-4",
         tall ? "min-h-28" : "min-h-20",
         className,
       )}
@@ -372,7 +371,7 @@ function ColourSwatch({
 
 function ControlHoverSwatch() {
   return (
-    <div className="grid gap-3 border-[0.5px] border-border-subtle bg-surface p-3.5 sm:grid-cols-[minmax(8rem,.6fr)_minmax(10rem,1fr)_auto] sm:items-center sm:gap-6">
+    <div className="grid gap-3 border-[0.5px] border-border-subtle bg-surface p-4 sm:grid-cols-[minmax(8rem,.6fr)_minmax(10rem,1fr)_auto] sm:items-center sm:gap-6">
       <div>
         <p className="text-xs font-semibold leading-4">Control hover</p>
         <p className="mt-0.5 text-[10px] leading-3 text-text-muted">
@@ -384,14 +383,14 @@ function ControlHoverSwatch() {
         theme keeps the state equally visible.
       </p>
       <div className="flex flex-wrap gap-x-3 gap-y-1 text-[10px] leading-3 text-text-muted sm:justify-end">
-        <span data-theme="light" className="inline-flex items-center gap-1.5">
+        <span data-theme="light" className="inline-flex items-center gap-2">
           <span
             aria-hidden="true"
             className="relative size-4 overflow-hidden border-[0.5px] border-border-subtle bg-surface after:absolute after:inset-0 after:bg-control-hover"
           />
           Light
         </span>
-        <span data-theme="dark" className="inline-flex items-center gap-1.5">
+        <span data-theme="dark" className="inline-flex items-center gap-2">
           <span
             aria-hidden="true"
             className="relative size-4 overflow-hidden border-[0.5px] border-border-subtle bg-surface after:absolute after:inset-0 after:bg-control-hover"

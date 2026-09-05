@@ -8,7 +8,7 @@ export default function Experience() {
     <section
       id="experience"
       aria-labelledby="experience-title"
-      className="mb-16 scroll-mt-4 sm:mb-24 sm:scroll-mt-10"
+      className="mb-16 scroll-mt-4 sm:mb-18 sm:scroll-mt-10"
     >
       <SectionHeader
         id="experience-title"
@@ -21,7 +21,7 @@ export default function Experience() {
         {experiences.map((e) => (
           <article
             className={cx(
-              "flex h-full flex-col bg-surface p-5 sm:p-6",
+              "flex h-full flex-col bg-surface p-6",
               e.featured && "lg:col-span-2",
             )}
             key={e.company}
@@ -66,7 +66,7 @@ export default function Experience() {
 
                 <p
                   className={cx(
-                    "my-5 max-w-[70ch] text-pretty text-sm leading-5 text-text-muted lg:text-[0.8rem] lg:leading-[1.5]",
+                    "my-6 max-w-[70ch] text-pretty text-sm leading-5 text-text-muted",
                     e.featured ? "lg:mb-0" : "lg:min-h-28",
                   )}
                 >
@@ -84,7 +84,7 @@ export default function Experience() {
                     className="grid grid-cols-[72px_1fr] items-start border-border-subtle py-3 not-last:border-b-[0.5px] sm:grid-cols-[90px_1fr] sm:items-center"
                     key={tech.label}
                   >
-                    <span className="text-[10px] font-bold uppercase tracking-wider text-text-muted">
+                    <span className="text-[10px] font-semibold uppercase tracking-wider text-text-muted">
                       {tech.label}
                     </span>
                     <div className="flex flex-wrap gap-x-3 gap-y-1 text-xs sm:gap-x-4">

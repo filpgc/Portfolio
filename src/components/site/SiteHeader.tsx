@@ -16,7 +16,7 @@ import ContactPopover from "./ContactPopover";
 import ThemeToggle from "./ThemeToggle";
 
 const navLinkClass =
-  "group flex min-h-11 min-w-11 items-center justify-center gap-1.5 rounded-full px-3 py-0.5 leading-none transition-[background-color,transform] duration-150 hover:bg-control-hover active:scale-97";
+  "group flex min-h-11 min-w-11 items-center justify-center gap-2 rounded-full px-3 py-0.5 leading-none transition-[background-color,transform] duration-150 hover:bg-control-hover active:scale-97";
 
 export default function SiteHeader() {
   const pathName = usePathname();
@@ -38,7 +38,7 @@ export default function SiteHeader() {
         >
           <span
             aria-hidden="true"
-            className="pointer-events-none absolute inset-0 rounded-full outline-[0.5px] outline-offset-0 outline-transparent transition-[outline-color,outline-offset] group-hover:outline-offset-10 group-hover:outline-border-subtle group-focus-visible:outline-border-subtle sm:group-hover:outline-offset-24"
+            className="pointer-events-none absolute inset-0 rounded-full outline-[0.5px] outline-offset-0 outline-transparent transition-[outline-color,outline-offset] group-hover:outline-offset-10 group-hover:outline-border-subtle group-focus-visible:outline-border-subtle sm:group-hover:outline-offset-22"
           />
           <span className="absolute inset-0 overflow-hidden rounded-full border-[0.5px] border-border-subtle bg-text-primary/20 transition-[border-color,box-shadow] duration-200 group-hover:border-text-primary/60 group-hover:shadow-sm/10">
             <Image
@@ -50,7 +50,7 @@ export default function SiteHeader() {
             />
           </span>
         </Link>
-        <ul className="flex justify-self-center gap-1 py-2 sm:gap-5 sm:py-6.5 lg:gap-10">
+        <ul className="flex justify-self-center gap-1 py-2 sm:gap-6 sm:py-6 lg:gap-10">
           <li>
             <Link
               href="/#work"

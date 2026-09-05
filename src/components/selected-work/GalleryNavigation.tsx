@@ -25,7 +25,7 @@ export default function GalleryNavigation({
   return (
     <nav
       aria-label="Gallery navigation"
-      className="absolute bottom-[max(0.85rem,env(safe-area-inset-bottom))] left-1/2 z-20 flex -translate-x-1/2 items-center gap-2.5 sm:gap-1.5"
+      className="absolute bottom-[max(0.85rem,env(safe-area-inset-bottom))] left-1/2 z-20 flex -translate-x-1/2 items-center gap-3 sm:gap-2"
     >
       <button
         type="button"
@@ -40,7 +40,7 @@ export default function GalleryNavigation({
         />
       </button>
 
-      <div className="flex h-9 items-center rounded-full outline-[0.5px] outline-text-primary/12 bg-surface/92 px-1.5 shadow-[0_2px_7px_rgb(17_17_15/0.06)] backdrop-blur-xl sm:h-8 dark:shadow-[0_2px_11px_rgb(0_0_0/0.2)]">
+      <div className="flex h-9 items-center rounded-full outline-[0.5px] outline-text-primary/12 bg-surface/92 px-2 shadow-[0_2px_7px_rgb(17_17_15/0.06)] backdrop-blur-xl sm:h-8 dark:shadow-[0_2px_11px_rgb(0_0_0/0.2)]">
         {slides.map((slide, index) => (
           <button
             key={slide.title}

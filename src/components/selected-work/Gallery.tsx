@@ -124,13 +124,13 @@ export default function Gallery({
       ref={dialogRef}
       tabIndex={-1}
       aria-label={`${project.name} selected work`}
-      className="gallery-dialog fixed bg-transparent inset-0 m-0 size-full max-h-none max-w-none overscroll-contain outline-0  p-20 outline-none backdrop:bg-black/25 backdrop:backdrop-blur-[3px] dark:backdrop:bg-black/55"
+      className="gallery-dialog fixed bg-transparent inset-0 m-0 size-full max-h-none max-w-none overscroll-contain outline-0 outline-none backdrop:bg-black/25 backdrop:backdrop-blur-[3px] dark:backdrop:bg-black/55"
       onClose={onClose}
       onClick={(event) => {
         if (event.currentTarget === event.target) closeDialog();
       }}
     >
-      <div className="gallery-panel-enter absolute sm:inset-10 inset-0 isolate m-auto overflow-hidden outline-[0.5px] outline-text-primary/12 bg-surface/98 shadow-[0_24px_80px_-24px_rgb(17_17_15/0.38),0_2px_10px_rgb(17_17_15/0.08)] max-w-[2000px] max-h-[1200px] sm:rounded-[18px]  lg:rounded-3xl dark:shadow-[0_28px_90px_-24px_rgb(0_0_0/0.72),0_2px_12px_rgb(0_0_0/0.32)]">
+      <div className="gallery-panel-enter absolute sm:inset-10 inset-0 isolate m-auto overflow-hidden outline-[0.5px] outline-text-primary/12 bg-surface/98 shadow-[0_24px_80px_-24px_rgb(17_17_15/0.38),0_2px_10px_rgb(17_17_15/0.08)] max-w-[2000px] max-h-[1200px] sm:rounded-[18px] lg:rounded-3xl dark:shadow-[0_28px_90px_-24px_rgb(0_0_0/0.72),0_2px_12px_rgb(0_0_0/0.32)]">
         <GalleryNavigation
           slides={images}
           currentIndex={currentViewIX}
@@ -154,7 +154,7 @@ export default function Gallery({
             />
           </Link>
         )}
-        <div className="absolute left-3 top-3 z-20 flex h-8 max-w-[calc(100%-4.75rem)] items-center gap-1.5 rounded-full outline-[0.5px] outline-text-primary/12 bg-surface/92 px-3 text-[10px] font-semibold uppercase tracking-wider text-text-primary shadow-[0_2px_7px_rgb(17_17_15/0.05)] backdrop-blur-xl sm:left-4 sm:top-4 sm:max-w-[calc(100%-5rem)] dark:shadow-[0_2px_9px_rgb(0_0_0/0.18)]">
+        <div className="absolute left-3 top-3 z-20 flex h-8 max-w-[calc(100%-4.75rem)] items-center gap-2 rounded-full outline-[0.5px] outline-text-primary/12 bg-surface/92 px-3 text-[10px] font-semibold uppercase tracking-wider text-text-primary shadow-[0_2px_7px_rgb(17_17_15/0.05)] backdrop-blur-xl sm:left-4 sm:top-4 sm:max-w-[calc(100%-5rem)] dark:shadow-[0_2px_9px_rgb(0_0_0/0.18)]">
           <span className="truncate">{project.name}</span>
           <span className="text-text-muted" aria-hidden="true">
             /
@@ -181,7 +181,7 @@ export default function Gallery({
           onScroll={syncCurrentSlide}
           role="region"
           aria-label="Project gallery"
-          className="relative flex size-full snap-x snap-mandatory gap-x-5 overflow-x-auto overflow-y-hidden overscroll-contain px-4 pb-16 pt-16 sm:gap-x-10 sm:px-8 sm:pb-16 sm:pt-20 lg:mt-4 lg:gap-x-40 lg:p-17"
+          className="relative flex size-full snap-x snap-mandatory gap-x-6 overflow-x-auto overflow-y-hidden overscroll-contain px-4 pb-16 pt-16 sm:gap-x-10 sm:px-8 sm:pb-16 sm:pt-18 lg:mt-4 lg:gap-x-18 lg:p-16"
         >
           {images.map((item, index) => (
             <div
@@ -191,13 +191,13 @@ export default function Gallery({
               }}
               role="group"
               aria-label={`${index + 1} of ${images.length}: ${item.title}`}
-              className="mt-2 flex min-w-0 basis-full shrink-0 snap-center flex-col overflow-y-auto rounded-lg pb-8 sm:basis-[84%] sm:overflow-visible sm:pb-0 md:mt-0 md:basis-[max(14rem,min(82%,calc(170dvh-40rem)))] lg:basis-[max(14rem,min(65%,calc(170dvh-50rem)))] 2xl:max-w-[100rem]"
+              className="mt-2 flex min-w-0 basis-full shrink-0 snap-center flex-col overflow-y-auto pb-8 sm:basis-[84%] sm:overflow-visible sm:pb-0 md:mt-0 md:basis-[max(14rem,min(82%,calc(170dvh-40rem)))] lg:basis-[max(14rem,min(65%,calc(170dvh-50rem)))] 2xl:max-w-[100rem]"
             >
               <p className="mb-3 text-xs font-semibold text-text-primary sm:mb-4 sm:text-sm">
                 {item.title}
               </p>
               <div
-                className="relative w-full shrink-0 overflow-hidden rounded-[10px] outline-[0.5px] outline-text-primary/12 bg-surface shadow-[0_18px_50px_-26px_rgb(17_17_15/0.38)] after:absolute after:top-1/2 after:z-10 after:hidden after:h-[0.5px] after:w-19 after:-right-19.5 after:bg-outline-subtle sm:rounded-xl lg:after:block dark:shadow-[0_20px_56px_-24px_rgb(0_0_0/0.68)]"
+                className="relative w-full shrink-0 overflow-hidden rounded-xl outline-[0.5px] outline-text-primary/12 bg-surface shadow-[0_18px_50px_-26px_rgb(17_17_15/0.38)] dark:shadow-[0_20px_56px_-24px_rgb(0_0_0/0.68)]"
                 style={{
                   aspectRatio:
                     "aspectRatio" in item
@@ -213,7 +213,7 @@ export default function Gallery({
                   active={currentViewIX === index}
                 />
               </div>
-              <div className="relative mb-8 mt-5 max-w-3xl text-sm leading-6 text-text-primary sm:mb-16 sm:mt-8 sm:text-base lg:mb-20 lg:mt-10">
+              <div className="relative mb-8 mt-6 max-w-3xl text-sm leading-6 text-text-primary sm:mb-16 sm:mt-8 sm:text-base lg:mb-18 lg:mt-10">
                 <p>{item.description}</p>
               </div>
             </div>

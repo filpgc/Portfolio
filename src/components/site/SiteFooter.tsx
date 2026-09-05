@@ -12,7 +12,7 @@ export default function SiteFooter() {
       <div className="sm:hidden">
         <div className="py-6 text-xs">
           <div className="flex flex-col gap-0.5">
-            <span className="font-bold">Filippo Piggici</span>
+            <span className="font-semibold">Filippo Piggici</span>
             <span className="text-text-muted">Frontend & Design Engineer</span>
           </div>
         </div>
@@ -75,11 +75,11 @@ export default function SiteFooter() {
 
       <div className="hidden h-full grid-cols-3 justify-between gap-8 sm:grid">
         <div className="flex flex-col gap-0.5 py-8 text-xs">
-          <span className="font-bold">Filippo Piggici</span>
+          <span className="font-semibold">Filippo Piggici</span>
           <span className="text-text-muted">Frontend & Design Engineer</span>
         </div>
 
-        <span className="mt-auto justify-self-center text-nowrap rounded-t-[50px] border-[0.5px] border-b-0 border-border-subtle bg-surface/80 px-3.5 pb-0.5 pt-1 text-[10px] font-medium text-text-primary/70">
+        <span className="mt-auto justify-self-center text-nowrap rounded-t-full border-[0.5px] border-b-0 border-border-subtle bg-surface/80 px-4 pb-0.5 pt-1 text-[10px] font-medium text-text-primary/70">
           Built with{" "}
           <span className="font-semibold text-text-primary/80">Next.js</span>,{" "}
           <span className="font-semibold text-text-primary/80">Tailwind</span>{" "}
@@ -87,7 +87,7 @@ export default function SiteFooter() {
           <span className="font-semibold text-text-primary/80">Cloudflare</span>
         </span>
 
-        <nav className="ml-auto pt-5">
+        <nav className="ml-auto pt-6">
           <ul className="flex items-center gap-x-6 text-xs tracking-tight">
             <li>
               <Link

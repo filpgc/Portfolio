@@ -4,9 +4,9 @@ export const experiences = [
     period: "2021 to Now",
     role: "Lead Frontend Engineer",
     progression: "Mid → Senior → Lead Frontend Engineer",
-    areas: "Frontend & Design direction",
+    areas: "Frontend & Product direction",
     summary:
-      "I lead the frontend of Outverse’s AI agent platform, taking work from problem framing and interaction design through implementation and production iteration. I design systems for intents, policies, tools and escalations, and make RAG context, sources and reasoning understandable. I also shape the shared frontend architecture, component library and engineering practices behind the platform and embedded customer widget.",
+      "I lead the frontend of Outverse’s AI agent platform, taking work from problem framing and product decisions through interaction design, implementation and production iteration. I shape how intents, policies, tools and escalations are configured, and make RAG context, sources and reasoning understandable to operators. I also shape the shared frontend architecture, component library and engineering practices behind the platform and embedded customer widget.",
     technologies: [
       {
         label: "Core",
@@ -44,11 +44,11 @@ export const experiences = [
   {
     company: "Streaming Calculator",
     period: "Independent",
-    role: "Owner · Product, design and engineering",
+    role: "Owner · Product and engineering",
     progression: null,
     areas: "End-to-end ownership",
     summary:
-      "I grew a single royalty calculator into a platform of more than 30 tools reaching approximately 20k views per month. I own product, design and engineering, as well as distribution and revenue: improving domain rating through technical SEO, roughly 800 backlinks and editorial collaborations; finding sponsors and affiliate partners; and building first-party analytics with placements that adapt to each tool.",
+      "I grew a single royalty calculator into a platform of more than 30 tools reaching approximately 20k views per month. I own product, design, engineering, distribution and revenue: improving domain rating through technical SEO, roughly 800 backlinks and editorial collaborations; finding sponsors and affiliate partners; and building first-party analytics with placements that adapt to each tool.",
     technologies: [
       {
         label: "Core",

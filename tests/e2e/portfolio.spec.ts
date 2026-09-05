@@ -44,10 +44,12 @@ test("project tabs expose one selected project consistently", async ({
   ).toBeVisible();
 
   await streamingTab.press("ArrowDown");
-  await expect(page.getByRole("tab", { name: /Treatwell/i })).toHaveAttribute(
-    "aria-selected",
-    "true",
-  );
+  const treatwellTab = page.getByRole("tab", { name: /Treatwell/i });
+  await expect(treatwellTab).toHaveAttribute("aria-selected", "true");
+
+  // Tab must leave the tablist for the panel, not get trapped on the tab.
+  await treatwellTab.press("Tab");
+  await expect(page.getByRole("tabpanel")).toBeFocused();
 });
 
 test("project details gallery adapts across mobile and tablet", async ({

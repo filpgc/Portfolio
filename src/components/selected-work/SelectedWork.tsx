@@ -47,8 +47,6 @@ export default function SelectedWork() {
     index: number,
     orientation: TabOrientation,
   ) {
-    event.preventDefault();
-
     const isHorizontal = orientation === "horizontal";
     const forwardKey = isHorizontal ? "ArrowRight" : "ArrowDown";
     const backwardKey = isHorizontal ? "ArrowLeft" : "ArrowUp";
@@ -58,9 +56,15 @@ export default function SelectedWork() {
       nextIndex = (index + 1) % projects.length;
     } else if (event.key === backwardKey) {
       nextIndex = (index - 1 + projects.length) % projects.length;
+    } else if (event.key === "Home") {
+      nextIndex = 0;
+    } else if (event.key === "End") {
+      nextIndex = projects.length - 1;
     }
 
+    // Only claim the keys the tablist handles; Tab, Enter and shortcuts pass through.
     if (nextIndex === undefined) return;
+    event.preventDefault();
 
     const nextProject = projects[nextIndex];
     document
@@ -89,7 +93,7 @@ export default function SelectedWork() {
       ref={sectionRef}
       id="work"
       aria-labelledby="selected-work-title"
-      className="mb-24 scroll-mt-4 sm:mb-44 sm:scroll-mt-10"
+      className="mb-16 scroll-mt-4 sm:mb-18 sm:scroll-mt-10"
     >
       {shouldLoadProjectImages && (
         <div

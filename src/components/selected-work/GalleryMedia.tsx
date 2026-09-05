@@ -36,14 +36,14 @@ export default function GalleryMedia({
 
   if (item.images.length === 2) {
     return (
-      <div className="flex size-full items-center justify-center gap-1.5 bg-[#171816] sm:gap-2">
+      <div className="flex size-full items-center justify-center gap-2 bg-[#171816]">
         {item.images.map((frame) => (
           <PosterFrame
             key={frame.image.src}
             frame={frame}
             priority={priority}
             sizes="36vw"
-            className="h-full shrink-0 rounded-[5.6px] outline-[0.5px] outline-white/12 shadow-[0_4px_14px_rgb(0_0_0/0.18)] sm:rounded-[10px]"
+            className="h-full shrink-0 rounded-sm outline-[0.5px] outline-white/12 shadow-[0_4px_14px_rgb(0_0_0/0.18)] sm:rounded-xl"
           />
         ))}
       </div>
@@ -51,14 +51,14 @@ export default function GalleryMedia({
   }
 
   return (
-    <div className="grid size-full grid-cols-3 items-center justify-center gap-1.5 bg-[#171816] p-2 sm:gap-4 sm:p-6">
+    <div className="grid size-full grid-cols-3 items-center justify-center gap-2 bg-[#171816] p-2 sm:gap-4 sm:p-6">
       {item.images.map((frame) => (
         <PosterFrame
           key={frame.image.src}
           frame={frame}
           priority={priority}
           sizes="30vw"
-          className="w-full rounded-[5.6px] outline-[0.5px] outline-white/12 shadow-[0_6px_18px_rgb(0_0_0/0.22)] sm:rounded-[10px]"
+          className="w-full rounded-sm outline-[0.5px] outline-white/12 shadow-[0_6px_18px_rgb(0_0_0/0.22)] sm:rounded-xl"
         />
       ))}
     </div>

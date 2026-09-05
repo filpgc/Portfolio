@@ -93,8 +93,8 @@ button {
   border-radius: inherit;
   background: color-mix(in srgb, var(--theme-text-primary) 6%, transparent);
   pointer-events: none;
-  animation: motion-attention-pulse 20s cubic-bezier(0.22, 1, 0.36, 1) 12s
-    infinite backwards;
+  animation: motion-attention-pulse 20s cubic-bezier(0.22, 1, 0.36, 1) 12s 2
+    backwards;
 }
 
 header:has(#my-popover:popover-open) .chat-invite::before {
